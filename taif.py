@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# hcif.py
+# taif.py
 # 2020-03-31 (Day 15 of CoViD19-Lockdown in Austria)
 # Public Domain
 # Based on _433.py from abyz.me.uk/rpi/pigpio/examples.html (http://abyz.me.uk/rpi/pigpio/code/_433_py.zip)
