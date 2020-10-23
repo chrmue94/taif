@@ -18,3 +18,7 @@ Eventually you have to start the pigpio service:
 To autostart the service at boot enter
 
     systemctl enable pigpio
+
+
+## Description
+taif.py contains an example implementation at the end of the file, which simply returns all datasets returned within 10 seconds
