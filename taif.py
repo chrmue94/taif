@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# taif.py
+# hcif.py
 # 2020-03-31 (Day 15 of CoViD19-Lockdown in Austria)
 # Public Domain
 # Based on _433.py from abyz.me.uk/rpi/pigpio/examples.html (http://abyz.me.uk/rpi/pigpio/code/_433_py.zip)
@@ -381,11 +381,11 @@ class rx():
          if (len(self._bytes) > 0) and (self._bytes[0] in self.HC_DEF):
             # devicetype is in the first byte
             _devicedef = self.HC_DEF[self._bytes[0]]
-            if (len(_devicedef) <> len(self._bytes)):
+            if (len(_devicedef["byte mapping"]) != len(self._bytes)):
                # Invalid count of bytes received
                self._risingCnt = 0
                self._synced = False
-               logging.warning("Controller " + str(self.controller) + ": Received " + str(len(self._bytes)) + "instead of " + len(_devicedef) + " bytes")
+               logging.warning("Controller " + str(self.controller) + ": Received " + str(len(self._bytes)) + " instead of " + str(len(_devicedef["byte mapping"])) + " bytes")
             else:
                for i, b in enumerate(self._bytes):
                   _bytemapping = _devicedef["byte mapping"][i]
